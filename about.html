@@ -5,6 +5,212 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: white;
+            color: #333;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header {
+            background: #1976d2;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: slideDown 1s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: fadeInText 2s ease-in-out;
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #bbdefb;
+            transform: scale(1.1);
+        }
+
+        .container {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        section h2 {
+            text-align: center;
+            color: #1976d2;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: zoomIn 1.2s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        section p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            color: #555;
+            text-align: justify;
+            animation: fadeInText 2s ease-in-out;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 20px;
+            animation: bounceIn 1.5s ease-in-out;
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #1976d2;
+            color: white;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .cta a:hover {
+            background: #1565c0;
+            transform: scale(1.1);
+        }
+
+        footer {
+    background: #1565c0;
+    color: white;
+    text-align: center;
+    padding: 5px 0; /* Reduced padding */
+    margin-top: 10px; /* Reduced margin */
+    animation: fadeIn 2s ease-in-out;
+}
+
+footer nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 3px; /* Reduced margin between links */
+    font-size: 0.8em; /* Reduced font size */
+    transition: color 0.3s;
+}
+
+footer nav a:hover {
+    color: #bbdefb;
+}
+
+footer p {
+    margin: 3px 0 0; /* Reduced margin */
+    font-size: 0.7em; /* Reduced font size */
+    animation: fadeInUp 2s ease-in-out;
+}
+.team-section {
+    margin-top: 15px; /* Reduced to move the "Our Team" section higher */
+    text-align: center;
+}
+
+        .team-section h2 {
+            color: #1976d2;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .team-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .team-card {
+            background: #f5f5f5;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .team-card:hover {
+            transform: scale(1.05);
+        }
+
+        .team-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .team-card h3 {
+            font-size: 1.6em;
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        .team-card p {
+            color: #555;
+            font-size: 1.1em;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,11 +224,39 @@
     <div class="container">
         <section>
             <h2>Who We Are</h2>
-            <p>We are a dedicated team passionate about providing exceptional experiences for our visitors. Our mission is to create a platform that is both engaging and user-friendly.</p>
+            <p>We are a dedicated team passionate about providing exceptional experiences for our visitors. Our mission is to create a platform that is both engaging and user-friendly. 
+                We believe in innovation, creativity, and continuous improvement to ensure that our platform not only meets but exceeds the expectations of our users. 
+                By staying committed to our core values, we aim to build a community that values trust, inclusivity, and collaboration.</p></p>
 
             <h2>Our Vision</h2>
-            <p>Our vision is to connect people and share knowledge through a beautifully designed and efficient website. We strive to inspire and empower every visitor who interacts with our platform.</p>
+            <p>Our vision is to connect people and share knowledge through a beautifully designed and efficient website. We strive to inspire and empower every visitor who interacts with our platform. 
+                We envision a future where technology serves as a bridge that brings people closer, facilitates meaningful connections, and fosters a culture of shared learning and growth. 
+                Our goal is to be a leading example of how digital platforms can positively impact lives, one interaction at a time.</p>
         </section>
+
+        <section class="team-section">
+            <h2>Our Team
+                
+            </h2>
+            <div class="team-cards">
+                <div class="team-card">
+                    <h3></h3>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="team-card">
+                    <h3></h3>
+                    <p>Lead Developer</p>
+                </div>
+                <div class="team-card">
+                    <h3></h3>
+                    <p>Marketing Team</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta">
+            <a href="contact.html">Get in Touch</a>
+        </div>
     </div>
 
     <footer>
