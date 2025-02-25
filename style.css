@@ -1,65 +1,298 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background: white;
     color: #333;
-    background-color: #f5f8fa;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Phone Icon Styling */
+.phone-icon {
+    font-size: 24px;
+    color: #1976d2; /* Blue color */
+    display: block;
+    margin: 0 auto 10px;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+/* Hover effect for Phone Icon */
+.phone-icon:hover {
+    transform: scale(1.1); /* Slightly bigger */
+    color: #1565c0; /* Darker blue on hover */
+}
+
+/* Click effect */
+.phone-icon:active {
+    transform: scale(1.1) translateY(2px);
+    color: #0d47a1; /* Darker blue on click */
+}
+
+/* Phone icon Bounce and Rotate Animation */
+@keyframes phoneBounce {
+    0% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-5px) rotate(-10deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(-3px) rotate(10deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+.phone-icon {
+    animation: phoneBounce 1.2s ease-in-out infinite;
+}
+
+/* Email Icon Styling */
+.email-icon {
+    font-size: 24px;
+    color: #1976d2; /* Blue color */
+    display: block;
+    margin: 0 auto 10px;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.email-icon i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.email-icon:hover {
+    transform: scale(1.1); /* Slightly bigger */
+    color: #1565c0; /* Darker blue on hover */
+}
+
+/* Click effect */
+.email-icon:active {
+    transform: scale(1.1) translateY(2px);
+    color: #0d47a1; /* Darker blue on click */
+}
+
+/* Bounce animation on load */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+}
+
+.email-icon {
+    animation: bounce 1.2s ease-in-out infinite;
 }
 
 header {
-    background-color: #007bff;
+    background: #1976d2;
     color: white;
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.8s ease-in-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 header h1 {
     margin: 0;
-    font-size: 1.5rem;
-}
-
-nav {
-    margin-top: 0.5rem;
+    font-size: 2.2em;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-right: 1rem;
-    font-size: 1rem;
+    margin: 0 12px;
+    font-size: 1.1em;
+    transition: color 0.3s, transform 0.2s;
 }
 
 nav a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    color: #bbdefb;
+    transform: scale(1.08);
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+    padding: 30px;
+    max-width: 1100px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
 }
 
-.home-section {
-    margin-bottom: 2rem;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
-h2 {
-    color: #0056b3;
+section h2 {
+    text-align: center;
+    color: #1976d2;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+section p {
+    line-height: 1.7;
+    font-size: 1.1em;
+    color: #555;
+    text-align: justify;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta a {
+    display: inline-block;
+    padding: 12px 30px; /* Increased padding for a more professional look */
+    background: #1976d2;
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 5px; /* Sharper corners for a modern design */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.cta a:hover {
+    background: #1565c0;
+    transform: translateY(-3px); /* Slight lifting effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow effect on hover */
+}
+
+.cta a:active {
+    transform: translateY(1px); /* Subtle press effect */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Smaller shadow on press */
+}
+
+footer {
+    background: #1565c0;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 10px;
+}
+
+footer nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+footer nav a:hover {
+    color: #bbdefb;
+}
+
+footer p {
+    margin: 3px 0;
+    font-size: 0.8em;
+}
+
+.team-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.team-section h2 {
+    color: #1976d2;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    background: #f5f5f5;
+    border-radius: 50%;
+    padding: 18px;
+    width: 240px;
+    height: 240px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+}
+
+.team-card-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    text-align: center;
+}
+
+.team-card:hover .team-card-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.team-card h3 {
+    font-size: 1.5em;
+    color: #1976d2;
+    margin-bottom: 8px;
+}
+
+.team-card p {
+    color: #555;
+    font-size: 0.9em;
+    margin-top: 5px;
+    font-weight: normal;
+    line-height: 1.4;
+    padding-left: 24px;
+}
+.cta-button {
+    display: inline-block;
+    padding: 4px 12px;  /* Smaller padding */
+    background-color: #1976d2;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;  /* Slightly smaller border radius */
+    font-size: 0.85em;  /* Smaller font size */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.cta-button:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);  /* Slight lifting effect on hover */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow effect */
+}
+
+.cta-button:active {
+    transform: translateY(1px);  /* Subtle press effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Smaller shadow on press */
 }

@@ -81,15 +81,24 @@ nav ul li a:hover {
     display: inline-block;
     background: #ffb703;
     color: white;
-    padding: 10px 20px;
-    margin-top: 15px;
+    padding: 12px 24px; /* Increased padding for a more professional look */
+    margin-top: 20px;
     text-decoration: none;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 6px; /* Slightly sharper corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .cta-button:hover {
     background: #ff9900;
+    transform: translateY(-3px); /* Slight lifting effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.cta-button:active {
+    transform: translateY(1px); /* Subtle press effect */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Smaller shadow on press */
 }
 
 /* Overview Section */
@@ -163,6 +172,22 @@ nav ul li a:hover {
 .cta-button {
     background: #ffb703;
     color: black;
+    font-size: 1.1em; /* Slightly larger text for better readability */
+    border-radius: 8px; /* Sharper corners */
+    padding: 12px 24px; /* Increased padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    background: #ff9900;
+    transform: translateY(-3px); /* Lifting effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow effect on hover */
+}
+
+.cta-button:active {
+    transform: translateY(1px); /* Subtle press effect */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Smaller shadow on press */
 }
 
 /* Footer */
