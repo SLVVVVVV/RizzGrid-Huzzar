@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свържете се с нас</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the footer stays at the bottom */
+        }
+        .header-image {
+            background: url('Solar-Panels-on-Metal-Roofs.jpg') no-repeat center center;
+            background-size: cover;
+            height: 350px;
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-section {
+            padding: 30px 0;
+        }
+        .contact-section h4, .contact-section h5 {
+            color: #0056b3;
+            font-weight: bold;
+        }
+        .footer {
+            background: #222;
+            color: white;
+            padding: 30px 0;  /* Slightly increased padding */
+            text-align: center;
+            font-size: 1.2rem; /* Slightly larger font size for footer text */
+            margin-top: auto; /* Ensures the footer is pushed to the bottom */
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer-content .column {
+            text-align: center;
+            padding: 30px; /* Increased padding */
+            font-size: 1.2rem; /* Slightly larger font size for content */
+        }
+        .footer h3 {
+            font-size: 1.5rem; /* Slightly larger heading font size */
+        }
+        .footer a {
+            color: #ff9800;
+            text-decoration: none;
+            font-size: 1.2rem; /* Slightly larger font size for links */
+        }
+        .footer .social-icons a {
+            font-size: 28px; /* Increased icon size */
+            color: white;
+            margin: 0 15px; /* Increased margin */
+        }
+        .signup input {
+            padding: 10px;
+            width: 220px;
+            border: none;
+            font-size: 1.2rem; /* Slightly larger input font size */
+        }
+        .signup button {
+            background-color: orange;
+            border: none;
+            padding: 10px 14px;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem; /* Slightly larger button font size */
+        }
+        
+        /* Specific style changes for blue and orange text */
+        .contact-section p strong {
+            font-size: 1.3rem;
+        }
+
+        .contact-section p strong.blue-text {
+            color: blue;
+            font-size: 1.4rem; /* Larger blue text */
+        }
+
+        .contact-section p strong.orange-text {
+            color: orange;
+            font-size: 1.4rem; /* Larger orange text */
+        }
+
+        .social-icons a {
+            font-size: 28px; /* Bigger icons */
+        }
+    </style>
+</head>
+<body>
+    <div class="header-image">Свържете се с нас</div>
+    <div class="container contact-section">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Работно време:</h4>
+                <p><strong class="blue-text">Понеделник - Петък</strong><br><strong class="orange-text">8:30 - 18:30</strong></p>
+                <p><strong class="blue-text">📞 087-890-63-34</strong></p>
+                <p><strong>✉ <a href="mailto:novagridsolar@gmail.com" class="blue-text">Прати ни съобщение</a></strong></p>
+                <h5>ИЛИ НИ НАМЕРЕТЕ В:</h5>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/YourProfile" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/YourProfile" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h4>Адрес:</h4>
+                <p><strong class="orange-text">Манастирски Ливади, "Околовръстен път" 25, 1404 София</strong></p>
+                <iframe width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Links to Help and FAQ pages -->
+    <nav>
+        <ul>
+            <li><a href="help.html"></a> <!-- Link to Help page -->
+            <li><a href="contact.html"></a> <!-- Link to FAQ page -->
+        </ul>
+    </nav>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="column">
+                <h3>Customer Support</h3>
+                <a href="help.html">HELP</a> | <a href="faq.html">FAQ</a> | <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="column signup">
+                <h3>Sign Me Up</h3>
+                <p>Sign me up for newsletters:</p>
+                <input type="email" placeholder="Email address"> 
+                <button>SUBMIT</button>
+            </div>
+            <div class="column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/YourPage" target="_blank" class="fab fa-facebook"></a>
+                    <a href="https://twitter.com/YourProfile" target="_blank" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/YourProfile" target="_blank" class="fab fa-instagram"></a>
+                    <a href="https://www.linkedin.com/in/YourProfile" target="_blank" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</body>
+</html>

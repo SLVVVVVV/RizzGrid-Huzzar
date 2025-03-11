@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Център за помощ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #1a1a2e; /* Тъмен син */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            padding: 40px 20%;
+        }
+
+        h2, h3 {
+            color: #1a1a2e;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 10px 0;
+        }
+
+        a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .feedback-form {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback-form input,
+        .feedback-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .feedback-form button {
+            padding: 12px 25px;
+            background-color: #1a1a2e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .feedback-form button:hover {
+            background-color: #25254d;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: 1.2rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Help & FAQ Buttons */
+        .footer .help-faq-buttons {
+            margin-top: 20px;
+        }
+
+        .footer .help-faq-buttons a {
+            padding: 12px 25px;
+            background-color: #ff9800;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            font-size: 1.4rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer .help-faq-buttons a:hover {
+            background-color: #e68900;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Център за помощ</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Добре дошли в нашия Център за помощ</h2>
+        <p>Ние сме тук, за да ви помогнем. По-долу ще намерите полезна информация относно използването на нашите услуги. Ако не можете да намерите отговор на въпроса си, не се колебайте да се свържете с нас!</p>
+
+        <h3>Чести проблеми</h3>
+        <ul>
+            <li><strong>Не можете да се логнете:</strong> Уверете се, че имейлът и паролата са въведени правилно. Ако сте забравили паролата си, кликнете <a href="reset-password.html">тук</a>, за да я възстановите.</li>
+            <li><strong>Проблеми с плащането:</strong> Уверете се, че детайлите за плащането ви са актуализирани. Ако срещате затруднения, моля, свържете се с нашия екип за поддръжка или разгледайте нашата <a href="faq.html">страница с често задавани въпроси</a>.</li>
+            <li><strong>Не получавате имейли:</strong> Проверете папката за спам или нежелана поща. Ако нашите имейли не са там, моля, добавете нашия домейн в белия списък или се свържете с поддръжката.</li>
+        </ul>
+
+        <h3>Ръководства за потребители</h3>
+        <ul>
+            <li><a href="guide-account-setup.html">Как да настроите акаунта си</a></li>
+            <li><a href="guide-payment.html">Как да извършите плащане</a></li>
+            <li><a href="guide-product-features.html">Как да използвате основни функции</a></li>
+        </ul>
+
+        <h3>Свържете се с поддръжката</h3>
+        <p>Ако все още имате проблеми, нашият екип за поддръжка е тук, за да ви помогне!</p>
+        <p>Свържете се с нас по имейл на <a href="mailto:support@yourcompany.com">support@yourcompany.com</a> или се обадете на нашия хелплайн на +1 234 567 890.</p>
+
+        <h3>Дайте ни вашето мнение</h3>
+        <p>Ще се радваме да чуем вашето мнение! Ако имате предложения за подобрения на нашите услуги, моля, попълнете <a href="feedback-form.html">формата за обратна връзка</a>.</p>
+
+        <!-- Search Bar -->
+        <h3>Търсене на отговор</h3>
+        <div class="search-bar">
+            <input type="text" placeholder="Търсене на помощ...">
+        </div>
+
+        <!-- Feedback Form -->
+        <div class="feedback-form">
+            <h3>Дайте ни вашето мнение</h3>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Вашето име" required>
+                <textarea name="feedback" rows="5" placeholder="Вашето мнение" required></textarea>
+                <button type="submit">Изпрати мнение</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 NovaGridSolar. Всички права запазени.</p>
+        <p><a href="#">Политика за поверителност</a> | <a href="#">Условия за ползване</a></p>
+
+        <!-- Help & FAQ Buttons -->
+        <div class="help-faq-buttons">
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+            <a href="main.html">Main page</a>
+        </div>
+    </footer>
+
+</body>
+</html>
