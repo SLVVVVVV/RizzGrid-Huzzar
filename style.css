@@ -1,298 +1,209 @@
+/* General Page Styling */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: white;
-    color: #333;
-    animation: fadeIn 1.5s ease-in-out;
+    box-sizing: border-box;
+    background-color: #fff; /* Set background to white */
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-
-/* Phone Icon Styling */
-.phone-icon {
-    font-size: 24px;
-    color: #1976d2; /* Blue color */
-    display: block;
-    margin: 0 auto 10px;
-    transition: transform 0.2s ease, color 0.3s ease;
-}
-
-/* Hover effect for Phone Icon */
-.phone-icon:hover {
-    transform: scale(1.1); /* Slightly bigger */
-    color: #1565c0; /* Darker blue on hover */
-}
-
-/* Click effect */
-.phone-icon:active {
-    transform: scale(1.1) translateY(2px);
-    color: #0d47a1; /* Darker blue on click */
-}
-
-/* Phone icon Bounce and Rotate Animation */
-@keyframes phoneBounce {
-    0% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-5px) rotate(-10deg); }
-    50% { transform: translateY(0) rotate(0deg); }
-    75% { transform: translateY(-3px) rotate(10deg); }
-    100% { transform: translateY(0) rotate(0deg); }
-}
-
-.phone-icon {
-    animation: phoneBounce 1.2s ease-in-out infinite;
-}
-
-/* Email Icon Styling */
-.email-icon {
-    font-size: 24px;
-    color: #1976d2; /* Blue color */
-    display: block;
-    margin: 0 auto 10px;
-    transition: transform 0.2s ease, color 0.3s ease;
-}
-
-.email-icon i {
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* Hover effect */
-.email-icon:hover {
-    transform: scale(1.1); /* Slightly bigger */
-    color: #1565c0; /* Darker blue on hover */
-}
-
-/* Click effect */
-.email-icon:active {
-    transform: scale(1.1) translateY(2px);
-    color: #0d47a1; /* Darker blue on click */
-}
-
-/* Bounce animation on load */
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    25% { transform: translateY(-5px); }
-    50% { transform: translateY(0); }
-    75% { transform: translateY(-3px); }
-    100% { transform: translateY(0); }
-}
-
-.email-icon {
-    animation: bounce 1.2s ease-in-out infinite;
-}
-
-header {
-    background: #1976d2;
+/* Header Section */
+.header-image {
+    background: url('/images/solar-panels.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px; /* Increased header height */
     color: white;
-    padding: 15px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: slideDown 0.8s ease-in-out;
+    font-size: 4rem; /* Increased font size */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes slideDown {
-    from { transform: translateY(-30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+/* Contact Section */
+.contact-section {
+    padding: 60px 15%; /* Increased padding for more spacious layout */
+    background: #fff;
+    width: 100%;
+    font-size: 2rem; /* Increased font size */
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.2em;
+.contact-section h4 {
+    color: #003366; /* Dark Blue Color */
+    font-weight: bold;
+    font-size: 3rem; /* Increased font size */
 }
 
-nav a {
-    color: white;
+.contact-section p {
+    font-size: 2rem; /* Increased font size */
+    color: #555; /* Darker gray for better contrast */
+}
+
+.contact-section a {
+    color: #003366; /* Dark Blue Color */
     text-decoration: none;
-    margin: 0 12px;
-    font-size: 1.1em;
-    transition: color 0.3s, transform 0.2s;
+    font-weight: bold;
+    font-size: 2rem; /* Increased font size */
 }
 
-nav a:hover {
-    color: #bbdefb;
-    transform: scale(1.08);
+.contact-section a:hover {
+    text-decoration: underline;
 }
 
-.container {
-    padding: 30px;
-    max-width: 1100px;
-    margin: 20px auto;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    animation: fadeInUp 1s ease-in-out;
+/* Phone Number Styling */
+.phone-number {
+    color: #183586; /* Dark Blue Color for phone number */
+    font-size: 3rem; /* Increased font size */
+    font-weight: bold;
+    font-family: 'Arial Black', sans-serif;
 }
 
-@keyframes fadeInUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+/* Message Text Styling */
+.message-text {
+    color: #003366; /* Darker Blue */
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2.5rem; /* Increased font size */
 }
 
-section h2 {
-    text-align: center;
-    color: #1976d2;
-    font-size: 2.2em;
-    margin-bottom: 15px;
-    animation: zoomIn 1s ease-in-out;
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 20px; /* Increased space between icons */
+    margin-top: 25px; /* Increased margin top */
 }
 
-@keyframes zoomIn {
-    from { transform: scale(0.85); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-section p {
-    line-height: 1.7;
-    font-size: 1.1em;
-    color: #555;
-    text-align: justify;
-}
-
-.cta {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.cta a {
-    display: inline-block;
-    padding: 12px 30px; /* Increased padding for a more professional look */
-    background: #1976d2;
-    color: white;
-    font-size: 1.1em;
-    text-decoration: none;
-    border-radius: 5px; /* Sharper corners for a modern design */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
-    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-}
-
-.cta a:hover {
-    background: #1565c0;
-    transform: translateY(-3px); /* Slight lifting effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow effect on hover */
-}
-
-.cta a:active {
-    transform: translateY(1px); /* Subtle press effect */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Smaller shadow on press */
-}
-
-footer {
-    background: #1565c0;
-    color: white;
-    text-align: center;
-    padding: 5px 0;
-    margin-top: 10px;
-}
-
-footer nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 5px;
-    font-size: 0.9em;
+.social-icons a {
+    font-size: 40px; /* Increased font size */
+    color: #333; /* Dark gray color for the icons */
     transition: color 0.3s;
 }
 
-footer nav a:hover {
-    color: #bbdefb;
+.social-icons a:hover {
+    color: #ff9800;
 }
 
-footer p {
-    margin: 3px 0;
-    font-size: 0.8em;
+/* FAQ Button */
+.text-center .btn-warning {
+    padding: 15px 30px; /* Increased padding for a more prominent button */
+    font-size: 1.8rem; /* Increased font size */
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+    background-color: #e68900; /* Button background */
 }
 
-.team-section {
-    margin-top: 20px;
-    text-align: center;
+.text-center .btn-warning:hover {
+    background: #d77f00; /* Darker orange on hover */
 }
 
-.team-section h2 {
-    color: #1976d2;
-    font-size: 2.2em;
-    margin-bottom: 20px;
-}
-
-.team-cards {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.team-card {
-    background: #f5f5f5;
-    border-radius: 50%;
-    padding: 18px;
-    width: 240px;
-    height: 240px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Footer */
+.footer {
+    background: #111;
+    color: white;
+    padding: 30px 20px; /* Increased padding for a more balanced footer */
     text-align: center;
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    font-size: 1.6rem; /* Increased font size */
+    margin-top: 60px; /* Increased margin to move the footer closer */
 }
 
-.team-card:hover {
-    transform: scale(1.05);
-}
-
-.team-card-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    text-align: center;
-}
-
-.team-card:hover .team-card-content {
-    opacity: 1;
-    visibility: visible;
-}
-
-.team-card h3 {
-    font-size: 1.5em;
-    color: #1976d2;
-    margin-bottom: 8px;
-}
-
-.team-card p {
-    color: #555;
-    font-size: 0.9em;
-    margin-top: 5px;
-    font-weight: normal;
-    line-height: 1.4;
-    padding-left: 24px;
-}
-.cta-button {
-    display: inline-block;
-    padding: 4px 12px;  /* Smaller padding */
-    background-color: #1976d2;
-    color: white;
+.footer a {
+    color: #ff9800; /* Bright Orange for links */
     text-decoration: none;
-    border-radius: 20px;  /* Slightly smaller border radius */
-    font-size: 0.85em;  /* Smaller font size */
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 0 8px; /* Increased margin between links */
+    font-size: 1.6rem; /* Increased font size */
 }
 
-.cta-button:hover {
-    background-color: #1565c0;
-    transform: translateY(-2px);  /* Slight lifting effect on hover */
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow effect */
+.footer a:hover {
+    text-decoration: underline;
 }
 
-.cta-button:active {
-    transform: translateY(1px);  /* Subtle press effect */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Smaller shadow on press */
+/* Newsletter */
+.footer input[type="email"] {
+    padding: 12px; /* Increased padding */
+    border-radius: 5px;
+    border: none;
+    width: 250px; /* Increased width of the email input */
+    font-size: 1.6rem; /* Increased font size */
+    background-color: #333; /* Darker input background */
+    color: white;
+}
+
+.footer button {
+    padding: 12px 24px; /* Increased padding */
+    background: #ff9800;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1.6rem; /* Increased font size */
+}
+
+.footer button:hover {
+    background: #e68900; /* Darker orange on hover */
+}
+
+/* Flexbox Layout for Contact Info */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increased gap for better spacing */
+    align-items: flex-start;
+}
+
+/* Specific Element Styling */
+
+/* Blue Color for "Понеделник - Петък" */
+.contact-section .work-days {
+    color: #003366; /* Dark Blue Color */
+    font-size: 2.5rem; /* Increased font size */
+}
+
+/* Darker Blue Color for Email */
+.contact-section .darker-email {
+    color: #002244; /* Even Darker Blue Color */
+}
+
+/* Orange Color for "ИЛИ НИ НАМЕРЕТЕ В:" */
+.contact-section .orange-text {
+    color: #ff9800; /* Orange Color */
+    font-size: 2.5rem; /* Increased font size */
+}
+
+/* New Classes for Custom Elements */
+
+/* Orange color for the address */
+.contact-section .address {
+    color: #ff9800; /* Orange */
+    font-size: 2.5rem; /* Increased font size */
+}
+
+/* Blue for "Понеделник - Петък", Phone Number and "Прати ни съобщение" */
+.contact-section .work-days,
+.contact-section .phone-number,
+.contact-section .message-text {
+    color: #003366; /* Dark Blue */
+    font-size: 2.5rem; /* Increased font size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-image {
+        height: 350px; /* Adjusted height for better mobile appearance */
+        font-size: 3rem; /* Reduced font size for mobile */
+    }
+
+    .contact-section {
+        padding: 40px 10%; /* Adjusted padding for mobile */
+    }
+
+    .footer {
+        padding: 20px 10px; /* Adjusted footer padding for mobile */
+        font-size: 1.4rem; /* Reduced font size for mobile */
+    }
 }
