@@ -1,298 +1,450 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background: white;
     color: #333;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-
-/* Phone Icon Styling */
-.phone-icon {
-    font-size: 24px;
-    color: #1976d2; /* Blue color */
-    display: block;
-    margin: 0 auto 10px;
-    transition: transform 0.2s ease, color 0.3s ease;
-}
-
-/* Hover effect for Phone Icon */
-.phone-icon:hover {
-    transform: scale(1.1); /* Slightly bigger */
-    color: #1565c0; /* Darker blue on hover */
-}
-
-/* Click effect */
-.phone-icon:active {
-    transform: scale(1.1) translateY(2px);
-    color: #0d47a1; /* Darker blue on click */
-}
-
-/* Phone icon Bounce and Rotate Animation */
-@keyframes phoneBounce {
-    0% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-5px) rotate(-10deg); }
-    50% { transform: translateY(0) rotate(0deg); }
-    75% { transform: translateY(-3px) rotate(10deg); }
-    100% { transform: translateY(0) rotate(0deg); }
-}
-
-.phone-icon {
-    animation: phoneBounce 1.2s ease-in-out infinite;
-}
-
-/* Email Icon Styling */
-.email-icon {
-    font-size: 24px;
-    color: #1976d2; /* Blue color */
-    display: block;
-    margin: 0 auto 10px;
-    transition: transform 0.2s ease, color 0.3s ease;
-}
-
-.email-icon i {
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* Hover effect */
-.email-icon:hover {
-    transform: scale(1.1); /* Slightly bigger */
-    color: #1565c0; /* Darker blue on hover */
-}
-
-/* Click effect */
-.email-icon:active {
-    transform: scale(1.1) translateY(2px);
-    color: #0d47a1; /* Darker blue on click */
-}
-
-/* Bounce animation on load */
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    25% { transform: translateY(-5px); }
-    50% { transform: translateY(0); }
-    75% { transform: translateY(-3px); }
-    100% { transform: translateY(0); }
-}
-
-.email-icon {
-    animation: bounce 1.2s ease-in-out infinite;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 130vh; /* Ensure the body takes the full height */
+    z-index: 1;
 }
 
 header {
-    background: #1976d2;
+    background-color: #2E271F;
     color: white;
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: slideDown 0.8s ease-in-out;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjusted to 100% */
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 5px 6px 3px rgba(0, 0, 0, .3); /* Subtle shadow */
 }
 
-@keyframes slideDown {
-    from { transform: translateY(-30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+header.transparent {
+    background-color: rgba(46, 39, 31, 0.9); /* Slightly transparent */
+    box-shadow: none; /* Remove shadow when at the top */
+}
+
+header img {
+    width: 50px; /* Adjust logo size */
+    height: auto;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.2em;
+    font-size: 1.3rem;
+    margin-left: 1rem; /* Space between logo and title */
+}
+nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* This will center the nav links horizontally */
+}
+
+nav a {
+    color: white;
+    text-decoration: none; /* Remove underline by default */
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold; /* Make links bold */
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav a:hover {
+    color: #F19530; /* Hover color */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.custom-shape-divider-top-1738782761 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    color: #ffffff;
+    transform: rotate(180deg);
+    margin-top: -130px;
+    z-index: 3;
+}
+
+/* Parallax container */
+.parallax-container {
+    position: relative;
+    height: 65vh; /* Matches the image height */
+    
+}
+
+/* Background image with parallax effect */
+.image-background {
+    position: relative;
+    top: 50; /* Start from the top */
+    width: 100%;
+    height: 65vh; /* Adjust height as necessary */
+    object-fit: cover; /* Ensure the image covers the container */
+    z-index: 1; /* Keeps the image behind other content */
+    will-change: transform; /* Optimizes for smooth scrolling */
+    transition: transform 0.1s ease-out; /* Smooth effect */
+    z-index: 2;
+}
+
+
+
+
+/* Large text for Your Message */
+.large-text {
+    font-size: 1.5rem; /* Larger font size for the label */
+    color: #1A326E; /* Dark blue color */
+    font-weight: bold; /* Make it bold */
+}
+
+/* Small text for Your Information */
+.info-text {
+    font-size: 1rem; /* Smaller font size for the information text */
+    color: #1A326E; /* Dark blue color */
+    font-weight: normal; /* Normal weight */
+}
+
+/* Container for name fields */
+.name-container {
+    display: flex; /* Use flexbox to align the fields next to each other */
+    gap: 20px; /* Space between the two name fields */
+    
+}
+
+/* Style for each name field */
+.name-field {
+    flex: 1; /* Makes each input take up equal width */
+}
+
+/* Style for input and textarea fields */
+input[type="text"], input[type="email"], textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the fields */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    margin-bottom: 10px; /* Space below the inputs */
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #F19530; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Cursor becomes a hand when hovered */
+}
+
+input[type="submit"]:hover {
+    background-color: #2E271F; /* Darker color on hover */
+}
+
+/* Style for the textarea */
+textarea {
+    resize: vertical; /* Allow users to resize vertically */
+}
+
+/* Label style */
+label {
+    font-size: 1rem;
+    color: #1A326E; /* Dark blue for labels */
+}
+                    
+
+
+nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 12px;
-    font-size: 1.1em;
-    transition: color 0.3s, transform 0.2s;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
 }
 
 nav a:hover {
-    color: #bbdefb;
-    transform: scale(1.08);
+    color: #F19530;
+    text-decoration: none;
+}
+
+
+footer {
+    background-color: #2E271F;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 0; /* Increase the padding for a taller footer */
+    width: 100%;
+    color: #F19530;
+    position: relative;
+    margin-top: auto;
+}
+
+.footer-links a {
+    margin: 0 0.7rem; /* Increase the space between links */
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #F19530;
 }
 
 .container {
-    padding: 30px;
-    max-width: 1100px;
-    margin: 20px auto;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    animation: fadeInUp 1s ease-in-out;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    flex: 1; /* This makes sure the container takes up the remaining space */
+    
 }
 
-@keyframes fadeInUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+.home-section {
+    margin-bottom: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
-    text-align: center;
-    color: #1976d2;
-    font-size: 2.2em;
-    margin-bottom: 15px;
-    animation: zoomIn 1s ease-in-out;
+/* Style for the large text (e.g., headings) */
+/* Style for the large text (e.g., headings) */
+h1, h2 {
+    color: #F19530; /* Big text color */
 }
 
-@keyframes zoomIn {
-    from { transform: scale(0.85); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+/* Style for the small text (e.g., paragraphs) */
+p, label, a {
+    color: #1A326E; /* Small text color */
 }
 
-section p {
-    line-height: 1.7;
-    font-size: 1.1em;
-    color: #555;
-    text-align: justify;
+/* Keep the footer text in #F19530 */
+footer p, footer nav a {
+    color: #F19530; /* Footer color */
 }
 
-.cta {
-    text-align: center;
-    margin-top: 20px;
+
+
+h3 {
+    color: #F19530; /* Apply the color to match the h3 style */
+    font-size: 1.5em; /* Adjust size as needed */
+    margin: 0;
 }
 
-.cta a {
-    display: inline-block;
-    padding: 12px 30px; /* Increased padding for a more professional look */
-    background: #1976d2;
-    color: white;
-    font-size: 1.1em;
-    text-decoration: none;
-    border-radius: 5px; /* Sharper corners for a modern design */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
-    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+
+h4 {
+   
+    text-align: center; /* Center the text */
+    font-size: 3rem; /* Adjust font size */
+    color: #F19530; /* Orange color for the heading */
+    font-weight: bold; /* Make it bold */
+    margin-bottom: 80px; /* Space below the heading */
+    position: relative;
 }
 
-.cta a:hover {
-    background: #1565c0;
-    transform: translateY(-3px); /* Slight lifting effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow effect on hover */
+/* Add the line under the heading */
+h4::after {
+    content: ""; /* Empty content for the line */
+    position: absolute;
+    left: 50%; /* Position the line in the middle */
+    bottom: -5px; /* Place the line just below the heading */
+    transform: translateX(-50%); /* Center the line */
+    width: 5%; /* Width of the line */
+    height: 2px; /* Thickness of the line */
+    background-color: #F19530; /* Line color */
 }
 
-.cta a:active {
-    transform: translateY(1px); /* Subtle press effect */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Smaller shadow on press */
+.locations-wrapper {
+    display: flex;
+    justify-content: center; /* Center the cards */
+    gap: 20px; /* Optional: controls the space between cards */
+    flex-wrap: wrap;
+    padding: 20px 0;
+    z-index: 20;
+    background-color: #ffffff;
 }
 
-footer {
-    background: #1565c0;
-    color: white;
-    text-align: center;
-    padding: 5px 0;
-    margin-top: 10px;
+
+.key-icon-box {
+    background-color: #fff; /* White background */
+    border: 1px solid #e7e7e7; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Inner padding */
+    width: 300px; /* Fixed width for the card */
+    margin: 10px auto; /* Center the card horizontally with some margin */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
-footer nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 5px;
-    font-size: 0.9em;
-    transition: color 0.3s;
+.key-icon-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
 }
 
-footer nav a:hover {
-    color: #bbdefb;
+.ib-wrapper {
+    text-align: left; /* Left align text inside the card */
 }
 
-footer p {
-    margin: 3px 0;
-    font-size: 0.8em;
+.service-heading {
+    font-size: 1.5rem; /* Larger title */
+    margin-bottom: 15px; /* Spacing below the title */
+    color: #8f4a00; /* Dark text color */
 }
 
+p {
+    font-size: 1rem; /* Normal text size */
+    margin: 10px 0; /* Spacing between paragraphs */
+    color: #F19530;
+}
+
+p a {
+    color: #000000; /* Blue color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+p a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.team-title {
+    position: absolute; /* Position the text over the image */
+    top: 50%; /* Position it vertically centered */
+    left: 50%; /* Position it horizontally centered */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    font-size: 3rem; /* Adjust the text size */
+    color: #333; /* Orange color for the text */
+    font-family: Arial, sans-serif;
+    font-size: 250%;
+    font-weight: bold; /* Bold font */
+    text-align: center; /* Center the text */
+    z-index: 100; /* Make sure the text is on top */
+    margin-top: -80px; /* Adjust the vertical positioning of the text */
+   
+}
+/* Style for the team section */
 .team-section {
-    margin-top: 20px;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+    padding: 20px;
 }
 
-.team-section h2 {
-    color: #1976d2;
-    font-size: 2.2em;
-    margin-bottom: 20px;
+/* Style for each team circle */
+.team-circles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
 }
 
-.team-cards {
+/* Style for each team circle */
+.team-circle {
+    background-color: #7db5cf; /* White background color */
+    color: black; /* Change the text color inside the circle to black */
+    width: 200px; /* Adjust the size of the circle (increased from 150px to 200px) */
+    height: 200px; /* Adjust the size of the circle (increased from 150px to 200px) */
+    border-radius: 50%; /* Make it a circle */
     display: flex;
     justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.team-card {
-    background: #f5f5f5;
-    border-radius: 50%;
-    padding: 18px;
-    width: 240px;
-    height: 240px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     text-align: center;
-    position: relative;
-    overflow: hidden;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, opacity 0.5s ease; /* Transition for scale, shadow, color, and opacity */
+    position: relative; /* Ensures that content inside the circle is positioned correctly */
 }
 
-.team-card:hover {
-    transform: scale(1.05);
+/* Initially set opacity of contents to 0 for fade-in effect */
+.team-info {
+    opacity: 0; /* Make the content inside invisible by default */
+    transition: opacity 0.5s ease; /* Smooth fade-in effect */
 }
 
-.team-card-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    text-align: center;
+/* Hover effect for the team circle */
+.team-circle:hover {
+    transform: scale(1.1); /* Slightly enlarge the circle on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+    background-color: #fffffe; /* Change the background color on hover */
 }
 
-.team-card:hover .team-card-content {
-    opacity: 1;
-    visibility: visible;
+/* Fade in effect on hover */
+.team-circle:hover .team-info {
+    opacity: 1; /* Make the content visible when hovering */
 }
 
-.team-card h3 {
-    font-size: 1.5em;
-    color: #1976d2;
-    margin-bottom: 8px;
+/* Style for the team member's name */
+.team-info h3 {
+    font-size: 1.2rem; /* Adjust size as needed */
+    margin-bottom: 5px;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
-.team-card p {
-    color: #555;
-    font-size: 0.9em;
-    margin-top: 5px;
-    font-weight: normal;
-    line-height: 1.4;
-    padding-left: 24px;
-}
-.cta-button {
-    display: inline-block;
-    padding: 4px 12px;  /* Smaller padding */
-    background-color: #1976d2;
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;  /* Slightly smaller border radius */
-    font-size: 0.85em;  /* Smaller font size */
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+/* Style for the team member's role */
+.team-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
-.cta-button:hover {
-    background-color: #1565c0;
-    transform: translateY(-2px);  /* Slight lifting effect on hover */
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow effect */
+/* Change text color when hovering over the circle */
+.team-circle:hover .team-info h3,
+.team-circle:hover .team-info p {
+    color: #050505; /* Change the text color to white on hover */
+}
+/* General icon style */
+.icon {
+    font-size: 3rem; /* Increased icon size */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Change cursor to pointer */
+    animation: bounceIn 2s ease infinite; /* Apply bounce animation */
 }
 
-.cta-button:active {
-    transform: translateY(1px);  /* Subtle press effect */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Smaller shadow on press */
+/* Hover effect for Gmail icon */
+.gmail-icon:hover {
+    transform: scale(1.3); /* Larger size on hover */
+    color: #F19530; /* Change color on hover */
+}
+
+/* Hover effect for Phone icon */
+.phone-icon:hover {
+    transform: scale(1.3); /* Larger size on hover */
+    color: #F19530; /* Change color on hover */
+}
+
+/* Bouncing animation keyframes */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8); /* Start smaller */
+        opacity: 0; /* Make the icon invisible at the start */
+    }
+    50% {
+        transform: scale(1.2); /* Scale up to a bit larger */
+        opacity: 1; /* Make it visible */
+    }
+    100% {
+        transform: scale(1); /* Return to normal size */
+        opacity: 1; /* Stay visible */
+    }
 }
