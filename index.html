@@ -1,75 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaGrid Solar - Home</title>
-    <link rel="stylesheet" href="indexStyle.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaGrid Solar</title>
+  <link rel="stylesheet" href="indexStyle.css" />
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">NovaGrid Solar</div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="NovaGrid Solar logo" />
+      <span>NovaGrid Solar</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Our team</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Affordable, Smart, and Sustainable Solar Energy</h1>
-            <p>Power your business and home with clean energy, seamlessly integrated.</p>
-            <a href="#" class="cta-button">Get Started</a>
-        </div>
-    </section>
-
-    <section class="overview">
-        <h2>Why Choose NovaGrid Solar?</h2>
-        <div class="feature-container">
-            <div class="feature">
-                <div class="image-placeholder"></div>
-                <h3>Eco-Friendly</h3>
-                <p>Reduce your carbon footprint with sustainable solar energy.</p>
-            </div>
-            <div class="feature">
-                <div class="image-placeholder"></div>
-                <h3>Cost-Saving</h3>
-                <p>Save money with fixed energy rates and lower electricity bills.</p>
-            </div>
-            <div class="feature">
-                <div class="image-placeholder"></div>
-                <h3>Smart Technology</h3>
-                <p>Monitor and manage energy usage in real-time with AI technology.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="why-us">
-        <h2>Why We Are the Best Choice</h2>
-        <div class="why-content">
-            <ul>
-                <li>✅ Lower costs than traditional energy providers</li>
-                <li>✅ Fixed pricing for long-term stability</li>
-                <li>✅ Zero upfront investment required for households</li>
-                <li>✅ Seamless integration with the power grid</li>
-            </ul>
-            <div class="image-placeholder large"></div>
-        </div>
-    </section>
-
-    <section class="cta">
-        <h2>Start Saving Today!</h2>
-        <p>Clean energy for a brighter future. Let’s make the switch together.</p>
-        <a href="#" class="cta-button">Get a Quote</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 NovaGrid Solar. All rights reserved.</p>
-    </footer>
-
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Захранете бъдещето си  <br />с чиста енергия</h1>
+      <div class="subtext">
+        Присъединете се към слънчевата революция с <span class="highlight">NovaGrid Solar</span>.<br />
+        Ние трансформираме начина, по който България захранва<br />домовете и бизнеса си
+      </div>
+    </div>
+  </header>
+<!-- Energy Categories Grid -->
+<section class="energy-grid">
+    <div class="grid">
+      <div class="grid-item">
+        <img src="icons/solar.svg" alt="Соларни Електроцентрали" />
+        <h3>Соларни Електроцентрали</h3>
+        <a href="#">Научете повече</a>
+      </div>
+      <div class="grid-item">
+        <img src="icons/wind.svg" alt="Вятърни Електроцентрали" />
+        <h3>Вятърни Електроцентрали</h3>
+        <a href="#">Научете повече</a>
+      </div>
+      <div class="grid-item">
+        <img src="icons/hydro.svg" alt="Водни Електроцентрали" />
+        <h3>Водни Електроцентрали</h3>
+        <a href="#">Научете повече</a>
+      </div>
+      <div class="grid-item">
+        <img src="icons/storage.svg" alt="Съхранение на Електроенергия" />
+        <h3>Съхранение на Електроенергия</h3>
+        <a href="#">Научете повече</a>
+      </div>
+      <div class="grid-item">
+        <img src="icons/biomass.svg" alt="Биогаз и Биомаса Електроцентрали" />
+        <h3>Биогаз и Биомаса Електроцентрали</h3>
+        <a href="#">Научете повече</a>
+      </div>
+      <div class="grid-item">
+        <img src="icons/shield.svg" alt="Гаранции" />
+        <h3>Гаранции</h3>
+        <a href="#">Научете повече</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Solar Energy Message Section -->
+  <section class="solar-message">
+    <h2>По-светло бъдеще със слънчева енергия</h2>
+    <p>
+      Традиционните енергийни източници, като въглища и газ, допринасят за високи емисии на въглероден диоксид, вредят на
+      околната среда и ускоряват изменението на климата.
+    </p>
+    <p>
+      Предприятията, разчитащи на тези изкопаеми горива, не само се сблъскват с променливи разходи за енергия, но също така се
+      борят да постигнат целите си за устойчивост.
+    </p>
+  </section>
+  
+  <!-- Solution Section -->
+  <section class="solution">
+    <h3>Нашето решение:</h3>
+    <div class="solution-content">
+      <ul>
+        <li>
+          ☀️ Слънчева енергия от нашия слънчев парк Нашият соларен парк генерира изобилна, екологична енергия, за да отговори
+          на нуждите на големите предприятия.
+        </li>
+        <li>
+          📄 cPPA (Corporate Power Purchase Agreement) Чрез cPPA ние предлагаме дългосрочни споразумения, които гарантират на
+          бизнеса: Достъпни енергийни разходи; Конкурентни цени в сравнение с традиционните енергийни източници
+        </li>
+      </ul>
+      <img src="images/solar-field.jpg" alt="Solar Field" />
+    </div>
+  </section>
+  
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="stat">
+      <h1>1500+</h1>
+      <p>Installations Completed</p>
+    </div>
+    <div class="stat">
+      <h1>30MW+</h1>
+      <p>Power Generated</p>
+    </div>
+    <div class="stat">
+      <h1>95%</h1>
+      <p>Customer Satisfaction</p>
+    </div>
+  </section>
+  
 </body>
 </html>
