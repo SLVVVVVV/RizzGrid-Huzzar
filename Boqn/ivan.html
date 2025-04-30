@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Иван – Собственик и Основател</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="../styles.css">
+  
+  <!-- Font Awesome (Make sure to replace 'your-kit' with your real Kit ID if needed) -->
+  <script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(45deg, #f5f5f5, #e0e0e0);
+      color: #333;
+      font-size: 18px;
+    }
+    header {
+  background-color: #2E271F;
+  color: #F19530;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 5px 6px 3px rgba(0, 0, 0, .3);
+}
+
+header img {
+  width: 50px;
+  height: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+}
+
+nav a:hover {
+  color: #F19530;
+  text-decoration: none;
+}
+footer {
+  background-color: #2E271F;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  color: #F19530;
+  position: relative;
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #F19530;
+}
+
+footer p, footer nav a {
+  color: #F19530;
+}
+
+
+
+    .container {
+      display: flex;
+      max-width: 1400px;
+      margin: 60px auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-content {
+      flex: 2;
+      padding-right: 40px;
+    }
+
+    .sidebar {
+      flex: 1;
+      border-left: 1px solid #ddd;
+      padding-left: 40px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 36px;
+      color: #333;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 18px;
+    }
+
+    .sidebar input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar input[type="text"]:focus {
+      border-color: #007BFF;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .recent-posts li, .tags span {
+      list-style: none;
+      margin-bottom: 15px;
+      display: block;
+      font-size: 18px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: #007BFF;
+      padding: 8px 16px;
+      border-radius: 20px;
+      margin: 8px 8px 0 0;
+      color: white;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .tags span:hover {
+      background: #0056b3;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #0056b3;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .sidebar {
+        padding-left: 0;
+        margin-top: 20px;
+      }
+
+      .main-content {
+        padding-right: 0;
+      }
+    }
+  </style>
+<header>
+  <div style="display: flex; align-items: center;">
+    <img src="logo.png" alt="Лого">
+    <h1>NovaGrid Solar</h1>
+  </div>
+  <nav>
+    <a href="#">Начало</a>
+    <a href="#">Проекти</a>
+    <a href="#">Контакти</a>
+  </nav>
+</header>
+<body>
+
+  <div class="container">
+    <div class="main-content">
+      <div class="card">
+        <h2>Иван</h2>
+        <p><strong>Позиция:</strong> Собственик и Основател</p>
+        <p><strong>Имейл:</strong> <a href="mailto:ivan@example.com">ivan@example.com</a></p>
+        <p><strong>Телефон:</strong> <a href="tel:+123456789">+123456789</a></p>
+      </div>
+
+      <div class="card">
+        <h3>За Иван</h3>
+        <p>Иван е визионер и създател на проекта. Неговата страст към иновации и предприемачество го тласкат напред в реализирането на нови идеи и решения.</p>
+        <p>С дългогодишен опит в управлението и стратегическото развитие, той ръководи екипа с увереност и вдъхновение. Иван вярва в силата на креативността, екипната работа и доверието в хората.</p>
+        <p>Извън работата, Иван се наслаждава на времето сред природата, спорт и вдъхновяващи книги за лидерство и личностно развитие.</p>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <input type="text" placeholder="Търсене ...">
+      <div class="card">
+        <h3>Недавни публикации</h3>
+        <ul class="recent-posts">
+          <li><a href="#">Как да изградим успешен бизнес</a></li>
+          <li><a href="#">Съвети за ефективно управление на екип</a></li>
+          <li><a href="#">Как да останем мотивирани в трудни моменти</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Етикети</h3>
+        <div class="tags">
+          <span>Предприемачество</span>
+          <span>Лидерство</span>
+          <span>Бизнес</span>
+          <span>Мотивация</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 NovaGrid Solar site. All rights reserved.</p>
+    <div class="footer-links">
+      
+        <a href="\privacy-policy\privacy-policy.html">Privacy Policy</a>
+        <a href="\Terms-And-Conditions\TaC.html">Terms of Service</a> 
+    </div>
+</footer>
+
+</body>
+</html>

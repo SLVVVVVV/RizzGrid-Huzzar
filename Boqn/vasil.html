@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Васил – Снимач на видеата</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+  background-color: #2E271F;
+  color: #F19530;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 5px 6px 3px rgba(0, 0, 0, .3);
+}
+
+header img {
+  width: 50px;
+  height: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+}
+
+nav a:hover {
+  color: #F19530;
+  text-decoration: none;
+}
+footer {
+  background-color: #2E271F;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  color: #F19530;
+  position: relative;
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #F19530;
+}
+
+footer p, footer nav a {
+  color: #F19530;
+}
+
+
+
+    .container {
+      display: flex;
+      max-width: 1300px;  /* Increased max-width for larger content */
+      margin: 40px auto;
+      padding: 30px;  /* Increased padding */
+      background: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .main-content {
+      flex: 2;
+      padding-right: 40px;  /* Increased padding */
+    }
+
+    .sidebar {
+      flex: 1;
+      border-left: 1px solid #ddd;
+      padding-left: 40px;  /* Increased padding */
+    }
+
+    .profile-img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 36px;  /* Increased heading size */
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 20px;  /* Increased paragraph size */
+      line-height: 1.6;
+    }
+
+    .sidebar input[type="text"] {
+      width: 90%;  /* Reduced width for a smaller search bar */
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 18px;  /* Increased font size */
+      transition: border-color 0.3s ease;
+    }
+
+    .sidebar input[type="text"]:focus {
+      border-color: #333;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .recent-posts, .tags {
+      margin-bottom: 40px;
+    }
+
+    .recent-posts li, .tags span {
+      list-style: none;
+      margin-bottom: 10px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: #e0e0e0;
+      padding: 8px 14px;  /* Slightly increased padding */
+      border-radius: 20px;
+      margin: 5px 5px 0 0;
+      font-size: 16px;  /* Increased font size */
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      .sidebar {
+        padding-left: 0;
+        margin-top: 20px;
+      }
+
+      .main-content {
+        padding-right: 0;
+      }
+
+      .profile-img {
+        max-width: 100%;
+      }
+    }
+  </style>
+<header>
+  <div style="display: flex; align-items: center;">
+    <img src="logo.png" alt="Лого">
+    <h1>NovaGrid Solar</h1>
+  </div>
+  <nav>
+    <a href="#">Начало</a>
+    <a href="#">Проекти</a>
+    <a href="#">Контакти</a>
+  </nav>
+</header>
+<body>
+
+  <div class="container">
+    <div class="main-content">
+      <h2>Васил</h2>
+      <p><strong>Позиция:</strong> Снимач на видеата</p>
+      <p><strong>Имейл:</strong> <a href="mailto:vasil@example.com">vasil@example.com</a></p>
+      <p><strong>Телефон:</strong> <a href="tel:+987654321">+987654321</a></p>
+
+      <p>Васил е професионален снимач с дългогодишен опит в създаването на визуални истории чрез видеа. Той работи с различни екипи за реализирането на креативни концепции, като специализира в заснемането на висококачествени видеа.</p>
+
+      <p>С внимание към детайлите и страст към техниката, Васил винаги търси нови начини да представи уникални и вълнуващи визуални ефекти. Той е част от екип, който съчетава изкуството и техниката в създаването на незабравими видеа.</p>
+
+      <p>В свободното си време Васил обича да пътува, да се занимава с фотография и да изследва новите технологии в областта на видеопроизводството.</p>
+    </div>
+
+    <div class="sidebar">
+      <input type="text" placeholder="Търсене ...">
+      <div class="recent-posts">
+        <h3>Недавни публикации</h3>
+        <ul>
+          <li><a href="#">Как да заснемеш идеалния кадър</a></li>
+          <li><a href="#">Новите технологии в видеопроизводството</a></li>
+          <li><a href="#">Как да използваш светлината в заснемането</a></li>
+        </ul>
+      </div>
+
+      <div class="tags">
+        <h3>Етикети</h3>
+        <span>Видеография</span>
+        <span>Фотография</span>
+        <span>Техники</span>
+        <span>Технологии</span>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 NovaGrid Solar site. All rights reserved.</p>
+    <div class="footer-links">
+      
+        <a href="\privacy-policy\privacy-policy.html">Privacy Policy</a>
+        <a href="\Terms-And-Conditions\TaC.html">Terms of Service</a> 
+    </div>
+</footer>
+
+</body>
+</html>
