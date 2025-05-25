@@ -15,7 +15,7 @@
             NovaGrid Solar
         </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#" class="active">Services</a></li>
             <li><a href="#">Our team</a></li>
@@ -29,16 +29,17 @@
             <h1>Защо да изберете NovaGrid?</h1>
         </div>
         <div class="hero-images">
-            <div class="image-box" onclick="changeDescription('premium')">
-                <img src="images/solar-panels.png" alt="Премиум качествени панели">
+            <div class="image-box" data-service="premium" onclick="changeDescription('premium')">
+                <img src="images/solar-panels.avif" alt="Премиум качествени панели">
                 <div class="overlay">Премиум качествени панели</div>
             </div>
-            <div class="image-box" onclick="changeDescription('install')">
-                <img src="images/expert-installation.png" alt="Експертни инсталации">
+            
+            <div class="image-box" data-service="install" onclick="changeDescription('install')">
+                <img src="images/installation.jpg" alt="Експертни инсталации">
                 <div class="overlay">Експертни инсталации</div>
             </div>
-            <div class="image-box" onclick="changeDescription('monitor')">
-                <img src="images/intelligent-monitoring.png" alt="Интелигентно наблюдение">
+            <div class="image-box" data-service="monitor" onclick="changeDescription('monitor')">
+                <img src="images/monitoring.jpg" alt="Интелигентно наблюдение">
                 <div class="overlay">Интелигентно наблюдение</div>
             </div>
         </div>
