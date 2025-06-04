@@ -448,3 +448,65 @@ p a:hover {
         opacity: 1; /* Stay visible */
     }
 }
+/* Responsive navigation toggle button */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* On small screens hide nav links and show toggle */
+@media (max-width: 768px) {
+  header nav {
+    position: fixed; /* fixed to top */
+    top: 60px; /* below header */
+    left: 0;
+    right: 0;
+    background-color: #2E271F;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* hide nav by default */
+    padding: 1rem 0;
+    z-index: 9999;
+  }
+
+  header nav.open {
+    display: flex; /* show nav when toggled */
+  }
+
+  header nav a {
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+  }
+
+  /* Show hamburger menu on small screens */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Center header contents */
+  header {
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  /* Adjust team-circle size on small devices */
+  .team-circle {
+    width: 140px;
+    padding: 20px;
+  }
+
+  .team-circle img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Smaller team-title font */
+  .team-title {
+    font-size: 150%;
+    margin-top: -30px;
+  }
+}
