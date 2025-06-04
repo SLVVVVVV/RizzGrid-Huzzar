@@ -18,7 +18,7 @@
             <h1>NovaGrid Solar</h1>
             <nav>
                 <a href="/index/index.html">Начало</a>
-             
+                                         <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
                 <a href="/contact-us/contact.html">Контакти</a>
                 <a href="\projects\projects.html">Проекти</a>
             </nav>
@@ -141,7 +141,10 @@
     const image = document.querySelector('.image-background');
     const scrollY = window.scrollY;
     const speedFactor = 0.3; // Adjust this for faster or slower effect
-
+    function toggleMenu() {
+  const nav = document.querySelector('header nav');
+  nav.classList.toggle('open');
+}
     image.style.transform = `translateY(${scrollY * speedFactor}px)`;
 });
 window.addEventListener("scroll", function () {
