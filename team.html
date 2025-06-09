@@ -8,9 +8,9 @@
         <!-- Add Google Fonts link for Open Sans -->
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
-    
 <body>
     <header>
         <div class="logo-container" style="display: flex; align-items: center;">
@@ -18,10 +18,11 @@
             <h1>NovaGrid Solar</h1>
             <nav>
                 <a href="/index/index.html">Начало</a>
-                                         <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+                         <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
                 <a href="/contact-us/contact.html">Контакти</a>
                 <a href="\projects\projects.html">Проекти</a>
             </nav>
+
         </div>
      </header>
      
@@ -41,7 +42,16 @@
         </svg>
     </div>
 
-    
+    <div class="container">
+        <div class="holder h1"></div>
+        <div class="holder h2"></div>
+        <div class="holder h3"></div>
+        <div class="holder h4"></div>
+        <div class="holder h5"></div>
+        <div class="holder h6"></div>
+        <div class="holder h7"></div>
+        <div class="holder h8"></div>
+      </div>
     <!-- Updated Section for Team -->
     <section class="team-section">
         <div class="team-circles">
@@ -52,7 +62,7 @@
                     <p>Собественик и Основател</p>
                     <a href="mailto:ivan@example.com" class="email-icon"><i class="fas fa-envelope"></i></a>
                     <a href="tel:+123456789" class="phone-icon"><i class="fas fa-phone-alt"></i></a>
-                    <a href="#" class="learn-more-btn">Разберете повече</a>
+                    <a href="ivan.html" class="learn-more-btn">Разберете повече</a>
                 </div>
             </div>
             <div class="team-circle">
@@ -61,7 +71,7 @@
                     <p>Главен Програмист</p>
                     <a href="mailto:slav@example.com" class="email-icon"><i class="fas fa-envelope"></i></a>
                     <a href="tel:+123456789" class="phone-icon"><i class="fas fa-phone-alt"></i></a>
-                    <a href="#" class="learn-more-btn">Разберете повече</a>
+                    <a href="Slav.html" class="learn-more-btn">Разберете повече</a>
                 </div>
             </div>
             <div class="team-circle">
@@ -70,7 +80,7 @@
                     <p>Помощник Програмист</p>
                     <a href="mailto:boyan@example.com" class="email-icon"><i class="fas fa-envelope"></i></a>
                     <a href="tel:+123456789" class="phone-icon"><i class="fas fa-phone-alt"></i></a>
-                    <a href="#" class="learn-more-btn">Разберете повече</a>
+                    <a href="Boqnn.html" class="learn-more-btn">Разберете повече</a>
                 </div>
             </div>
             <div class="team-circle">
@@ -79,7 +89,7 @@
                     <p>Дизайнер на Сайта</p>
                     <a href="mailto:iskra@example.com" class="email-icon"><i class="fas fa-envelope"></i></a>
                     <a href="tel:+123456789" class="phone-icon"><i class="fas fa-phone-alt"></i></a>
-                    <a href="#" class="learn-more-btn">Разберете повече</a>
+                    <a href="iskra.html" class="learn-more-btn">Разберете повече</a>
                 </div>
             </div>
             <div class="team-circle">
@@ -88,7 +98,7 @@
                     <p>Снимач на видеата в социалните мрежи</p>
                     <a href="mailto:vasil@example.com" class="email-icon"><i class="fas fa-envelope"></i></a>
                     <a href="tel:+123456789" class="phone-icon"><i class="fas fa-phone-alt"></i></a>
-                    <a href="#" class="learn-more-btn">Разберете повече</a>
+                    <a href="vasil.html" class="learn-more-btn">Разберете повече</a>
                 </div>
             </div>
             <div class="team-circle">
@@ -97,7 +107,7 @@
                     <p>Дизайнер на логото</p>
                     <a href="mailto:elena@example.com" class="email-icon"><i class="fas fa-envelope"></i></a>
                     <a href="tel:+123456789" class="phone-icon"><i class="fas fa-phone-alt"></i></a>
-                    <a href="#" class="learn-more-btn">Разберете повече</a>
+                    <a href="elena.html" class="learn-more-btn">Разберете повече</a>
                 </div>
             </div>
             <div class="team-circle">
@@ -106,7 +116,7 @@
                     <p>Маниджър на постове в Социални Мрежи</p>
                     <a href="mailto:viktoriq@example.com" class="email-icon"><i class="fas fa-envelope"></i></a>
                     <a href="tel:+123456789" class="phone-icon"><i class="fas fa-phone-alt"></i></a>
-                    <a href="#" class="learn-more-btn">Разберете повече</a>
+                    <a href="viktoria.html" class="learn-more-btn">Разберете повече</a>
                 </div>
             </div>
             <div class="team-circle">
@@ -115,7 +125,7 @@
                     <p>Дизайнер на рекламни видеа и постове</p>
                     <a href="mailto:lubomira@example.com" class="email-icon"><i class="fas fa-envelope"></i></a>
                     <a href="tel:+123456789" class="phone-icon"><i class="fas fa-phone-alt"></i></a>
-                    <a href="#" class="learn-more-btn">Разберете повече</a>
+                    <a href="luba.html" class="learn-more-btn">Разберете повече</a>
                 </div>
             </div>
         </div>
@@ -141,10 +151,11 @@
     const image = document.querySelector('.image-background');
     const scrollY = window.scrollY;
     const speedFactor = 0.3; // Adjust this for faster or slower effect
-    function toggleMenu() {
+function toggleMenu() {
   const nav = document.querySelector('header nav');
   nav.classList.toggle('open');
 }
+
     image.style.transform = `translateY(${scrollY * speedFactor}px)`;
 });
 window.addEventListener("scroll", function () {

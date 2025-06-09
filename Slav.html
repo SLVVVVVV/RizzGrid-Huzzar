@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Слав – Главен Програмист</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(45deg, #f5f5f5, #e0e0e0);
+      color: #333;
+    }
+    header {
+  background-color: #2E271F;
+  color: #F19530;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 5px 6px 3px rgba(0, 0, 0, .3);
+}
+
+header img {
+  width: 50px;
+  height: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+}
+
+nav a:hover {
+  color: #F19530;
+  text-decoration: none;
+}
+footer {
+  background-color: #2E271F;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  color: #F19530;
+  position: relative;
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #F19530;
+}
+
+footer p, footer nav a {
+  color: #F19530;
+}
+
+
+
+    .container {
+      display: flex;
+      max-width: 1400px;
+      margin: 60px auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-content {
+      flex: 2;
+      padding-right: 40px;
+    }
+
+    .sidebar {
+      flex: 1;
+      border-left: 1px solid #ddd;
+      padding-left: 40px;
+    }
+
+    .profile-img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 36px;
+      color: #333;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 18px;
+    }
+
+    .sidebar input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar input[type="text"]:focus {
+      border-color: #007BFF;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .recent-posts, .tags {
+      margin-bottom: 60px;
+    }
+
+    .recent-posts li, .tags span {
+      list-style: none;
+      margin-bottom: 15px;
+      display: block;
+      font-size: 18px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: #007BFF;
+      padding: 8px 16px;
+      border-radius: 20px;
+      margin: 8px 8px 0 0;
+      color: white;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .tags span:hover {
+      background: #0056b3;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #0056b3;
+    }
+
+    /* Card style for content blocks */
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #333;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .sidebar {
+        padding-left: 0;
+        margin-top: 20px;
+      }
+
+      .main-content {
+        padding-right: 0;
+      }
+
+      .profile-img {
+        max-width: 100%;
+      }
+    }
+  </style>
+<header>
+  <div style="display: flex; align-items: center;">
+    <img src="logo.png" alt="Лого">
+    <h1>NovaGrid Solar</h1>
+  </div>
+  <nav>
+    <a href="#">Начало</a>
+    <a href="#">Проекти</a>
+    <a href="#">Контакти</a>
+  </nav>
+</header>
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <div class="container">
+    <div class="main-content">
+      <div class="card">
+        <h2>Слав</h2>
+        <p><strong>Позиция:</strong> Главен Програмист</p>
+        <p><strong>Имейл:</strong> <a href="mailto:slav@example.com">slav@example.com</a></p>
+        <p><strong>Телефон:</strong> <a href="tel:+987654321">+987654321</a></p>
+      </div>
+
+      <div class="card">
+        <h3>За Слав</h3>
+        <p>Слав е главен програмист с опит в разработката на софтуерни решения. Неговата страст към програмирането и технологиите го мотивират постоянно да учи нови технологии и да създава иновации.</p>
+        <p>С богат опит в изграждането на екипи и управление на проекти, той ръководи разработката на сложни системи и приложения, като следва най-добрите практики и стандарти в индустрията.</p>
+        <p>Извън работата, Слав обича да прекарва време с приятели, да играе видео игри и да се занимава с технологични иновации.</p>
+      </div>
+      <div class="card">
+        <h3>Тук може да видите често задвани въпроси за Слав, за да разберете малко повече за неговата работа, и неговите интерси</h3>
+      
+        <p><strong>1. В какво се състои ролята ти като главен програмист?</strong><br>
+        Ръководя разработката на софтуерни проекти и следя за високо качество на кода.</p>
+      
+        <p><strong>2. Какви технологии използваш най-често?</strong><br>
+        Основно JavaScript (Node.js, React), Python и cloud платформи като AWS.</p>
+      
+        <p><strong>3. Как подходиш към изграждането на силен екип?</strong><br>
+        Подкрепям личностното развитие, добра комуникация и споделяне на знания.</p>
+      
+        <p><strong>4. Кои проекти са ти най-интересни?</strong><br>
+        Проекти с реално въздействие и технически предизвикателства.</p>
+      
+        <p><strong>5. Какво е важно при създаването на стабилна система?</strong><br>
+        Добро планиране, модулен код и непрекъснато тестване.</p>
+      
+        <p><strong>6. Как се справяш със сложни технически проблеми?</strong><br>
+        Анализирам внимателно и търся решения с екипа.</p>
+      
+        <p><strong>7. Какво те вдъхновява извън работата?</strong><br>
+        Видеоигри, технологични новости и време с близки.</p>
+      </div>
+      
+    </div>
+
+    <div class="sidebar">
+      <input type="text" placeholder="Търсене ...">
+      <div class="card">
+        <h3>Недавни публикации</h3>
+        <ul class="recent-posts">
+          <li><a href="#">Най-новите тенденции в програмирането</a></li>
+          <li><a href="#">Как да изградим успешен екип за разработка</a></li>
+          <li><a href="#">10 най-добри практики за програмисти</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Етикети</h3>
+        <div class="tags">
+          <span>Програмиране</span>
+          <span>Технологии</span>
+          <span>Разработка</span>
+          <span>Софтуер</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 NovaGrid Solar site. All rights reserved.</p>
+    <div class="footer-links">
+      
+        <a href="\privacy-policy\privacy-policy.html">Privacy Policy</a>
+        <a href="\Terms-And-Conditions\TaC.html">Terms of Service</a> 
+    </div>
+</footer>
+
+</body>
+</html>
