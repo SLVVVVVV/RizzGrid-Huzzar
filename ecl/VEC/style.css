@@ -6,7 +6,7 @@ body {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Make sure the body takes the full height of the viewport */
+    min-height: 100vh;
     z-index: 1;
 }
 
@@ -23,23 +23,23 @@ header {
     justify-content: space-between;
     align-items: center;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 5px 6px 3px rgba(0, 0, 0, .3); /* Initial subtle shadow */
+    box-shadow: 0px 5px 6px 3px rgba(0, 0, 0, .3);
 }
 
 header.transparent {
-    background-color: rgba(46, 39, 31, 0.9); /* Slightly see-through */
-    box-shadow: none; /* Remove shadow when at the top */
+    background-color: rgba(46, 39, 31, 0.9);
+    box-shadow: none;
 }
 
 header img {
-    width: 50px; /* Adjust the width as needed */
+    width: 50px;
     height: auto;
 }
 
 header h1 {
     margin: 0;
     font-size: 1.3rem;
-    margin-left: 1rem; /* Space between logo and title */
+    margin-left: 1rem;
 }
 
 nav {
@@ -47,21 +47,23 @@ nav {
     align-items: center;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* This will center the nav links horizontally */
+    transform: translateX(-50%);
+    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
-    text-decoration: none; /* Remove underline by default */
+    text-decoration: none;
     margin-right: 1rem;
     font-size: 1.2rem;
-    font-weight: bold; /* Make links bold */
+    font-weight: bold;
     font-family: 'Open Sans', sans-serif;
+    white-space: nowrap;
 }
 
 nav a:hover {
-    color: #F19530; /* Hover color */
-    text-decoration: none; /* Remove underline on hover */
+    color: #F19530;
+    text-decoration: none;
 }
 
 .custom-shape-divider-top-1738782761 {
@@ -76,65 +78,42 @@ nav a:hover {
     z-index: 3;
 }
 
-/* Parallax container */
 .parallax-container {
     position: relative;
-    height: 65vh; /* Matches the image height */
-    
+    height: 65vh;
 }
 
-/* Background image with parallax effect */
 .image-background {
     position: relative;
-    top: 50; /* Start from the top */
+    top: 0;
     width: 100%;
-    height: 65vh; /* Adjust height as necessary */
-    object-fit: cover; /* Ensure the image covers the container */
-    z-index: 1; /* Keeps the image behind other content */
-    will-change: transform; /* Optimizes for smooth scrolling */
-    transition: transform 0.1s ease-out; /* Smooth effect */
+    height: 65vh;
+    object-fit: cover;
     z-index: 2;
-}
-nav {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
-}
-
-nav a:hover {
-    color: #F19530;
-    text-decoration: none;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
 }
 
 footer {
     background-color: #2E271F;
-    color: white;
+    color: #F19530;
     text-align: center;
     padding: 1rem 0;
     width: 100%;
-    color: #F19530;
     position: relative;
 }
 
 .footer-links {
     margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .footer-links a {
     color: white;
     text-decoration: none;
-    margin: 0 0.5rem;
     font-size: 0.9rem;
 }
 
@@ -146,8 +125,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
-    flex: 1; /* This makes sure the container takes up the remaining space */
-    
+    flex: 1;
 }
 
 .home-section {
@@ -159,73 +137,44 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the large text (e.g., headings) */
-/* Style for the large text (e.g., headings) */
 h1, h2 {
-    color: #F19530; /* Big text color */
+    color: #F19530;
+    word-wrap: break-word;
 }
 
-/* Style for the small text (e.g., paragraphs) */
 p, label, a {
-    color: #1A326E; /* Small text color */
+    color: #1A326E;
+    word-wrap: break-word;
 }
 
-/* Keep the footer text in #F19530 */
 footer p, footer nav a {
-    color: #F19530; /* Footer color */
+    color: #F19530;
 }
-
-
 
 h3 {
-    color: #F19530; /* Apply the color to match the h3 style */
-    font-size: 1.5em; /* Adjust size as needed */
+    color: #F19530;
+    font-size: 1.5em;
     margin: 0;
 }
 
-
 h4 {
-   
-    text-align: center; /* Center the text */
-    font-size: 3rem; /* Adjust font size */
-    color: #F19530; /* Orange color for the heading */
-    font-weight: bold; /* Make it bold */
-    margin-bottom: 80px; /* Space below the heading */
+    text-align: center;
+    font-size: 3rem;
+    color: #F19530;
+    font-weight: bold;
+    margin-bottom: 80px;
     position: relative;
 }
 
-/* Add the line under the heading */
 h4::after {
-    content: ""; /* Empty content for the line */
+    content: "";
     position: absolute;
-    left: 50%; /* Position the line in the middle */
-    bottom: -5px; /* Place the line just below the heading */
-    transform: translateX(-50%); /* Center the line */
-    width: 5%; /* Width of the line */
-    height: 2px; /* Thickness of the line */
-    background-color: #F19530; /* Line color */
-}
-
-h4 {
-   
-    text-align: center; /* Center the text */
-    font-size: 3rem; /* Adjust font size */
-    color: #F19530; /* Orange color for the heading */
-    font-weight: bold; /* Make it bold */
-    margin-bottom: 80px; /* Space below the heading */
-    position: relative;
-}
-
-/* Add the line under the heading */
-h4::after {
-    content: ""; /* Empty content for the line */
-    position: absolute;
-    left: 50%; /* Position the line in the middle */
-    bottom: -5px; /* Place the line just below the heading */
-    transform: translateX(-50%); /* Center the line */
-    width: 5%; /* Width of the line */
-    height: 2px; /* Thickness of the line */
-    background-color: #F19530; /* Line color */
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 5%;
+    height: 2px;
+    background-color: #F19530;
 }
 
 .contact-title {
@@ -233,85 +182,198 @@ h4::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 250%;
+    font-size: 2.5rem;
     color: #25211D;
     font-family: Arial, sans-serif;
     font-weight: bold;
     text-align: center;
     z-index: 100;
     margin-top: -80px;
-
-
+    padding: 0 1rem;
 }
-
-
 
 .big-div {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: flex-start;
-    gap: 300px;
+    gap: 2rem;
     padding: 20px;
     background-color: #ffffff;
     border: 2px solid black;
-    z-index: 200000000;
-    margin-top: 20px;
-    /* Center horizontally */
-    margin-left: 150px;
-    width: 1500px;
-  }
-  
-  
-  .content {
+    border-radius: 20px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    margin: 20px auto;
+    max-width: 95vw;
+    box-sizing: border-box;
+}
+
+.content {
     display: flex;
     flex-direction: column;
-  }
-  .title-wrapper {
+    flex: 1 1 300px;
+    min-width: 280px;
+}
+
+.title-wrapper {
     display: flex;
     align-items: center;
-    gap: 10px; /* spacing between image and text */
-  }
-  
-  .title-icon {
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.title-icon {
     margin-bottom: 6px;
     width: 40px;
     height: 40px;
-  }
-  .title {
-    color:#1A326E;
-    width: 700px;
-    font-size: 40px;
+    flex-shrink: 0;
+}
+
+.title {
+    color: #1A326E;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
-  }
-  
-  .text {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.text {
     margin-top: 20px;
-    width: 800px;
-    font-size: 25px;
+    font-size: 1.25rem;
     color: #333;
-  }
-  
-  .picture img {
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.picture img {
     width: 407px;
     height: 542px;
-  }
-  .small-pic-wrapper {
+}
+
+.small-pic-wrapper {
     width: 320px;
     height: 320px;
-    margin-left: -160px;   /* Move half width to center on bottom-left */
-    margin-top: -160px; /* Move half height to center on bottom-left */
-  }
-  
-  .small-pic-wrapper img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .page-wrapper {
+    margin-left: -160px;   /* Keep your original centering */
+    margin-top: -160px;
+}
+
+.small-pic-wrapper img {
+    width: 320px;
+    height: 320px;
+}
+
+
+.page-wrapper {
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     flex: 1;
     padding: 100px 20px;
     background-color: #ffffff;
     z-index: 100;
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .big-div {
+        gap: 1.5rem;
+        padding: 15px;
+        max-width: 90vw;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .text {
+        font-size: 1.1rem;
+    }
+
+    .page-wrapper {
+        padding: 80px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    nav {
+        position: static;
+        transform: none;
+        justify-content: center;
+        margin-top: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        margin: 0 0.5rem 0.5rem 0.5rem;
+        font-size: 1rem;
+    }
+
+    .big-div {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+        gap: 1rem;
+    }
+
+    .content, .picture, .small-pic-wrapper {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .title {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+        margin-top: 0;
+        padding: 0 0.5rem;
+    }
+
+    .page-wrapper {
+        padding: 60px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.1rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        margin: 0 0.3rem 0.3rem 0.3rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
+
+    .big-div {
+        padding: 5px;
+        gap: 0.75rem;
+    }
+
+    .page-wrapper {
+        padding: 40px 5px;
+    }
 }

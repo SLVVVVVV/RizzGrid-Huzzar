@@ -6,7 +6,7 @@ body {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Make sure the body takes the full height of the viewport */
+    min-height: 100vh; /* Use min-height instead of fixed height */
     z-index: 1;
 }
 
@@ -23,45 +23,53 @@ header {
     justify-content: space-between;
     align-items: center;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 5px 6px 3px rgba(0, 0, 0, .3); /* Initial subtle shadow */
+    box-shadow: 0px 5px 6px 3px rgba(0, 0, 0, .3);
+    flex-wrap: wrap; /* allow wrapping on small screens */
 }
 
 header.transparent {
-    background-color: rgba(46, 39, 31, 0.9); /* Slightly see-through */
-    box-shadow: none; /* Remove shadow when at the top */
+    background-color: rgba(46, 39, 31, 0.9);
+    box-shadow: none;
 }
 
 header img {
-    width: 50px; /* Adjust the width as needed */
+    width: 50px;
     height: auto;
 }
 
 header h1 {
     margin: 0;
     font-size: 1.3rem;
-    margin-left: 1rem; /* Space between logo and title */
+    margin-left: 1rem;
+    flex-grow: 1; /* allows title to take available space */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 nav {
     display: flex;
     align-items: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); /* This will center the nav links horizontally */
+    position: static; /* changed from absolute for responsiveness */
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
-    text-decoration: none; /* Remove underline by default */
-    margin-right: 1rem;
+    text-decoration: none;
+    margin: 0 0.75rem 0.25rem 0.75rem;
     font-size: 1.2rem;
-    font-weight: bold; /* Make links bold */
+    font-weight: bold;
     font-family: 'Open Sans', sans-serif;
+    white-space: nowrap;
 }
 
 nav a:hover {
-    color: #F19530; /* Hover color */
-    text-decoration: none; /* Remove underline on hover */
+    color: #F19530;
+    text-decoration: none;
 }
 
 .custom-shape-divider-top-1738782761 {
@@ -79,120 +87,93 @@ nav a:hover {
 /* Parallax container */
 .parallax-container {
     position: relative;
-    height: 65vh; /* Matches the image height */
-    
+    height: 65vh;
+    max-height: 600px;
+    overflow: hidden;
 }
 
 /* Background image with parallax effect */
 .image-background {
     position: relative;
-    top: 50; /* Start from the top */
+    top: 0;
     width: 100%;
-    height: 65vh; /* Adjust height as necessary */
-    object-fit: cover; /* Ensure the image covers the container */
-    z-index: 1; /* Keeps the image behind other content */
-    will-change: transform; /* Optimizes for smooth scrolling */
-    transition: transform 0.1s ease-out; /* Smooth effect */
+    height: 65vh;
+    max-height: 600px;
+    object-fit: cover;
     z-index: 2;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
 }
 
-
-
-
-/* Large text for Your Message */
+/* Text styles */
 .large-text {
-    font-size: 1.5rem; /* Larger font size for the label */
-    color: #1A326E; /* Dark blue color */
-    font-weight: bold; /* Make it bold */
+    font-size: 1.5rem;
+    color: #1A326E;
+    font-weight: bold;
 }
 
-/* Small text for Your Information */
 .info-text {
-    font-size: 1rem; /* Smaller font size for the information text */
-    color: #1A326E; /* Dark blue color */
-    font-weight: normal; /* Normal weight */
+    font-size: 1rem;
+    color: #1A326E;
+    font-weight: normal;
 }
 
 /* Container for name fields */
 .name-container {
-    display: flex; /* Use flexbox to align the fields next to each other */
-    gap: 20px; /* Space between the two name fields */
-    
-}
-
-/* Style for each name field */
-.name-field {
-    flex: 1; /* Makes each input take up equal width */
-}
-
-/* Style for input and textarea fields */
-input[type="text"], input[type="email"], textarea {
-    width: 100%; /* Full width */
-    padding: 10px; /* Padding inside the fields */
-    border: 1px solid #ccc; /* Light grey border */
-    border-radius: 8px; /* Rounded corners */
-    font-size: 1rem; /* Font size */
-    box-sizing: border-box; /* Ensures padding is included in width */
-    margin-bottom: 10px; /* Space below the inputs */
-}
-
-/* Style for the submit button */
-input[type="submit"] {
-    background-color: #F19530; /* Button color */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Padding inside the button */
-    border: none; /* Remove default border */
-    border-radius: 8px; /* Rounded corners */
-    font-size: 1rem; /* Font size */
-    cursor: pointer; /* Cursor becomes a hand when hovered */
-}
-
-input[type="submit"]:hover {
-    background-color: #2E271F; /* Darker color on hover */
-}
-
-/* Style for the textarea */
-textarea {
-    resize: vertical; /* Allow users to resize vertically */
-}
-
-/* Label style */
-label {
-    font-size: 1rem;
-    color: #1A326E; /* Dark blue for labels */
-}
-                    
-
-
-nav {
     display: flex;
-    align-items: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    gap: 20px;
+    flex-wrap: wrap; /* allows wrapping on smaller devices */
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
+.name-field {
+    flex: 1 1 200px; /* flexible with minimum width */
+    min-width: 150px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 10px;
     font-family: 'Open Sans', sans-serif;
 }
 
-nav a:hover {
-    color: #F19530;
-    text-decoration: none;
+input[type="submit"] {
+    background-color: #F19530;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+input[type="submit"]:hover {
+    background-color: #2E271F;
+}
+
+textarea {
+    resize: vertical;
+}
+
+label {
+    font-size: 1rem;
+    color: #1A326E;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Footer styles */
 footer {
     background-color: #2E271F;
-    color: white;
+    color: #F19530;
     text-align: center;
     padding: 1rem 0;
     width: 100%;
-    color: #F19530;
     position: relative;
 }
 
@@ -215,8 +196,7 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
-    flex: 1; /* This makes sure the container takes up the remaining space */
-    
+    flex: 1;
 }
 
 .home-section {
@@ -228,153 +208,146 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the large text (e.g., headings) */
-/* Style for the large text (e.g., headings) */
 h1, h2 {
-    color: #F19530; /* Big text color */
+    color: #F19530;
+    margin-top: 0;
 }
 
-/* Style for the small text (e.g., paragraphs) */
 p, label, a {
-    color: #1A326E; /* Small text color */
+    color: #1A326E;
 }
 
-/* Keep the footer text in #F19530 */
 footer p, footer nav a {
-    color: #F19530; /* Footer color */
+    color: #F19530;
 }
-
-
 
 h3 {
-    color: #F19530; /* Apply the color to match the h3 style */
-    font-size: 1.5em; /* Adjust size as needed */
+    color: #F19530;
+    font-size: 1.5em;
     margin: 0;
 }
 
-
 h4 {
-   
-    text-align: center; /* Center the text */
-    font-size: 3rem; /* Adjust font size */
-    color: #F19530; /* Orange color for the heading */
-    font-weight: bold; /* Make it bold */
-    margin-bottom: 80px; /* Space below the heading */
+    text-align: center;
+    font-size: 3rem;
+    color: #F19530;
+    font-weight: bold;
+    margin-bottom: 80px;
     position: relative;
 }
 
-/* Add the line under the heading */
 h4::after {
-    content: ""; /* Empty content for the line */
+    content: "";
     position: absolute;
-    left: 50%; /* Position the line in the middle */
-    bottom: -5px; /* Place the line just below the heading */
-    transform: translateX(-50%); /* Center the line */
-    width: 5%; /* Width of the line */
-    height: 2px; /* Thickness of the line */
-    background-color: #F19530; /* Line color */
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 5%;
+    height: 2px;
+    background-color: #F19530;
 }
 
 .locations-wrapper {
     display: flex;
-    justify-content: center; /* Center the cards */
-    gap: 20px; /* Optional: controls the space between cards */
+    justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
     padding: 20px 0;
     z-index: 20;
     background-color: #ffffff;
 }
 
-
 .key-icon-box {
-    background-color: #fff; /* White background */
-    border: 1px solid #e7e7e7; /* Light gray border */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 20px; /* Inner padding */
-    width: 300px; /* Fixed width for the card */
-    margin: 10px auto; /* Center the card horizontally with some margin */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    margin: 10px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
 .key-icon-box:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .ib-wrapper {
-    text-align: left; /* Left align text inside the card */
+    text-align: left;
 }
 
 .service-heading {
-    font-size: 1.5rem; /* Larger title */
-    margin-bottom: 15px; /* Spacing below the title */
-    color: #8f4a00; /* Dark text color */
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #8f4a00;
 }
 
 p {
-    font-size: 1rem; /* Normal text size */
-    margin: 10px 0; /* Spacing between paragraphs */
+    font-size: 1rem;
+    margin: 10px 0;
     color: #F19530;
 }
 
 p a {
-    color: #000000; /* Blue color for links */
-    text-decoration: none; /* Remove underline */
+    color: #000000;
+    text-decoration: none;
 }
 
 p a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
 
 .contact-title {
-    position: absolute; /* Position the text over the image */
-    top: 50%; /* Position it vertically centered */
-    left: 50%; /* Position it horizontally centered */
-    transform: translate(-50%, -50%); /* Adjust for exact centering */
-    font-size: 3rem; /* Adjust the text size */
-    color: #333; /* Orange color for the text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: #333;
     font-family: Arial, sans-serif;
-    font-size: 250%;
-    font-weight: bold; /* Bold font */
-    text-align: center; /* Center the text */
-    z-index: 100; /* Make sure the text is on top */
-    margin-top: -80px; /* Adjust the vertical positioning of the text */
-   
+    font-weight: bold;
+    text-align: center;
+    z-index: 100;
+    margin-top: -80px;
+    padding: 0 10px; /* add some padding for small screens */
 }
-
-
 
 /* Flex container for layout */
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center the items horizontally */
-
-  z-index: 20;
+    justify-content: center;
+    gap: 20px;
+    z-index: 20;
+    padding: 10px;
 }
 
 /* Contact info section */
 .contact-info {
-    flex: 1 1 45%; /* Takes about 45% of the container width */
+    flex: 1 1 300px;
+    max-width: 600px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #D3B683;
     border-radius: 8px;
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 /* Smaller box inside the contact info */
 .contact-info-box {
-    width: 100%; /* Slightly smaller than the parent */
+    width: 100%;
     padding: 15px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* Title styling */
@@ -395,13 +368,14 @@ p a:hover {
 
 /* Map section */
 .map-bottom {
-    flex: 1 1 48%; /* Also takes about 45% of the container */
+    flex: 1 1 300px;
+    max-width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
-/* Map iframe styling */
 .map-bottom iframe {
     border-radius: 8px;
     width: 100%;
@@ -409,7 +383,78 @@ p a:hover {
     border: none;
 }
 
-  .red-asterisk {
+/* Red asterisk */
+.red-asterisk {
     color: red;
     font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    header {
+        padding: 1rem;
+    }
+    header h1 {
+        font-size: 1.1rem;
+        margin-left: 0.5rem;
+    }
+    nav a {
+        font-size: 1rem;
+        margin: 0 0.5rem 0.25rem 0.5rem;
+    }
+    .contact-title {
+        font-size: 2rem;
+        margin-top: -60px;
+        padding: 0 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    .name-container {
+        flex-direction: column;
+    }
+    nav {
+        position: static;
+        justify-content: center;
+    }
+    nav a {
+        margin: 0.3rem 0.5rem;
+        font-size: 1rem;
+    }
+    .contact-info, .map-bottom {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .image-background {
+        height: 40vh;
+        max-height: 400px;
+    }
+    .contact-title {
+        font-size: 1.8rem;
+        margin-top: -50px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1rem;
+    }
+    nav a {
+        font-size: 0.9rem;
+        margin: 0.2rem 0.4rem;
+    }
+    .large-text {
+        font-size: 1.2rem;
+    }
+    .info-text {
+        font-size: 0.9rem;
+    }
+    .contact-title {
+        font-size: 1.5rem;
+        margin-top: -40px;
+    }
 }

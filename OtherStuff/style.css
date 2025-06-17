@@ -1,0 +1,450 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 130vh; /* Ensure the body takes the full height */
+    z-index: 1;
+}
+
+header {
+    background-color: #2E271F;
+    color: white;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjusted to 100% */
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 5px 6px 3px rgba(0, 0, 0, .3); /* Subtle shadow */
+}
+
+header.transparent {
+    background-color: rgba(46, 39, 31, 0.9); /* Slightly transparent */
+    box-shadow: none; /* Remove shadow when at the top */
+}
+
+header img {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.3rem;
+    margin-left: 1rem; /* Space between logo and title */
+}
+nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* This will center the nav links horizontally */
+}
+
+nav a {
+    color: white;
+    text-decoration: none; /* Remove underline by default */
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold; /* Make links bold */
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav a:hover {
+    color: #F19530; /* Hover color */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.custom-shape-divider-top-1738782761 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    color: #ffffff;
+    transform: rotate(180deg);
+    margin-top: -130px;
+    z-index: 3;
+}
+
+/* Parallax container */
+.parallax-container {
+    position: relative;
+    height: 65vh; /* Matches the image height */
+    
+}
+
+/* Background image with parallax effect */
+.image-background {
+    position: relative;
+    top: 50; /* Start from the top */
+    width: 100%;
+    height: 65vh; /* Adjust height as necessary */
+    object-fit: cover; /* Ensure the image covers the container */
+    z-index: 1; /* Keeps the image behind other content */
+    will-change: transform; /* Optimizes for smooth scrolling */
+    transition: transform 0.1s ease-out; /* Smooth effect */
+    z-index: 2;
+}
+
+
+
+
+/* Large text for Your Message */
+.large-text {
+    font-size: 1.5rem; /* Larger font size for the label */
+    color: #1A326E; /* Dark blue color */
+    font-weight: bold; /* Make it bold */
+}
+
+/* Small text for Your Information */
+.info-text {
+    font-size: 1rem; /* Smaller font size for the information text */
+    color: #1A326E; /* Dark blue color */
+    font-weight: normal; /* Normal weight */
+}
+
+/* Container for name fields */
+.name-container {
+    display: flex; /* Use flexbox to align the fields next to each other */
+    gap: 20px; /* Space between the two name fields */
+    
+}
+
+/* Style for each name field */
+.name-field {
+    flex: 1; /* Makes each input take up equal width */
+}
+
+/* Style for input and textarea fields */
+input[type="text"], input[type="email"], textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the fields */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    margin-bottom: 10px; /* Space below the inputs */
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #F19530; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Cursor becomes a hand when hovered */
+}
+
+input[type="submit"]:hover {
+    background-color: #2E271F; /* Darker color on hover */
+}
+
+/* Style for the textarea */
+textarea {
+    resize: vertical; /* Allow users to resize vertically */
+}
+
+/* Label style */
+label {
+    font-size: 1rem;
+    color: #1A326E; /* Dark blue for labels */
+}
+                    
+
+
+nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav a:hover {
+    color: #F19530;
+    text-decoration: none;
+}
+
+
+footer {
+    background-color: #2E271F;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 0; /* Increase the padding for a taller footer */
+    width: 100%;
+    color: #F19530;
+    position: relative;
+    margin-top: auto;
+}
+
+.footer-links a {
+    margin: 0 0.7rem; /* Increase the space between links */
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #F19530;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    flex: 1; /* This makes sure the container takes up the remaining space */
+    
+}
+
+.home-section {
+    margin-bottom: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the large text (e.g., headings) */
+/* Style for the large text (e.g., headings) */
+h1, h2 {
+    color: #F19530; /* Big text color */
+}
+
+/* Style for the small text (e.g., paragraphs) */
+p, label, a {
+    color: #1A326E; /* Small text color */
+}
+
+/* Keep the footer text in #F19530 */
+footer p, footer nav a {
+    color: #F19530; /* Footer color */
+}
+
+
+
+h3 {
+    color: #F19530; /* Apply the color to match the h3 style */
+    font-size: 1.5em; /* Adjust size as needed */
+    margin: 0;
+}
+
+
+h4 {
+   
+    text-align: center; /* Center the text */
+    font-size: 3rem; /* Adjust font size */
+    color: #F19530; /* Orange color for the heading */
+    font-weight: bold; /* Make it bold */
+    margin-bottom: 80px; /* Space below the heading */
+    position: relative;
+}
+
+/* Add the line under the heading */
+h4::after {
+    content: ""; /* Empty content for the line */
+    position: absolute;
+    left: 50%; /* Position the line in the middle */
+    bottom: -5px; /* Place the line just below the heading */
+    transform: translateX(-50%); /* Center the line */
+    width: 5%; /* Width of the line */
+    height: 2px; /* Thickness of the line */
+    background-color: #F19530; /* Line color */
+}
+
+.locations-wrapper {
+    display: flex;
+    justify-content: center; /* Center the cards */
+    gap: 20px; /* Optional: controls the space between cards */
+    flex-wrap: wrap;
+    padding: 20px 0;
+    z-index: 20;
+    background-color: #ffffff;
+}
+
+
+.key-icon-box {
+    background-color: #fff; /* White background */
+    border: 1px solid #e7e7e7; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Inner padding */
+    width: 300px; /* Fixed width for the card */
+    margin: 10px auto; /* Center the card horizontally with some margin */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.key-icon-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.ib-wrapper {
+    text-align: left; /* Left align text inside the card */
+}
+
+.service-heading {
+    font-size: 1.5rem; /* Larger title */
+    margin-bottom: 15px; /* Spacing below the title */
+    color: #8f4a00; /* Dark text color */
+}
+
+p {
+    font-size: 1rem; /* Normal text size */
+    margin: 10px 0; /* Spacing between paragraphs */
+    color: #F19530;
+}
+
+p a {
+    color: #000000; /* Blue color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+p a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.team-title {
+    position: absolute; /* Position the text over the image */
+    top: 50%; /* Position it vertically centered */
+    left: 50%; /* Position it horizontally centered */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    font-size: 3rem; /* Adjust the text size */
+    color: #333; /* Orange color for the text */
+    font-family: Arial, sans-serif;
+    font-size: 250%;
+    font-weight: bold; /* Bold font */
+    text-align: center; /* Center the text */
+    z-index: 100; /* Make sure the text is on top */
+    margin-top: -80px; /* Adjust the vertical positioning of the text */
+   
+}
+/* Style for the team section */
+.team-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+/* Style for each team circle */
+.team-circles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Style for each team circle */
+.team-circle {
+    background-color: #7db5cf; /* White background color */
+    color: black; /* Change the text color inside the circle to black */
+    width: 200px; /* Adjust the size of the circle (increased from 150px to 200px) */
+    height: 200px; /* Adjust the size of the circle (increased from 150px to 200px) */
+    border-radius: 50%; /* Make it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, opacity 0.5s ease; /* Transition for scale, shadow, color, and opacity */
+    position: relative; /* Ensures that content inside the circle is positioned correctly */
+}
+
+/* Initially set opacity of contents to 0 for fade-in effect */
+.team-info {
+    opacity: 0; /* Make the content inside invisible by default */
+    transition: opacity 0.5s ease; /* Smooth fade-in effect */
+}
+
+/* Hover effect for the team circle */
+.team-circle:hover {
+    transform: scale(1.1); /* Slightly enlarge the circle on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+    background-color: #fffffe; /* Change the background color on hover */
+}
+
+/* Fade in effect on hover */
+.team-circle:hover .team-info {
+    opacity: 1; /* Make the content visible when hovering */
+}
+
+/* Style for the team member's name */
+.team-info h3 {
+    font-size: 1.2rem; /* Adjust size as needed */
+    margin-bottom: 5px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Style for the team member's role */
+.team-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Change text color when hovering over the circle */
+.team-circle:hover .team-info h3,
+.team-circle:hover .team-info p {
+    color: #050505; /* Change the text color to white on hover */
+}
+/* General icon style */
+.icon {
+    font-size: 3rem; /* Increased icon size */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Change cursor to pointer */
+    animation: bounceIn 2s ease infinite; /* Apply bounce animation */
+}
+
+/* Hover effect for Gmail icon */
+.gmail-icon:hover {
+    transform: scale(1.3); /* Larger size on hover */
+    color: #F19530; /* Change color on hover */
+}
+
+/* Hover effect for Phone icon */
+.phone-icon:hover {
+    transform: scale(1.3); /* Larger size on hover */
+    color: #F19530; /* Change color on hover */
+}
+
+/* Bouncing animation keyframes */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8); /* Start smaller */
+        opacity: 0; /* Make the icon invisible at the start */
+    }
+    50% {
+        transform: scale(1.2); /* Scale up to a bit larger */
+        opacity: 1; /* Make it visible */
+    }
+    100% {
+        transform: scale(1); /* Return to normal size */
+        opacity: 1; /* Stay visible */
+    }
+}

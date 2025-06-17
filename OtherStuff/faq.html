@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Често задавани въпроси (FAQ)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            padding: 40px 20%;
+            flex: 1;
+        }
+
+        h2, h3 {
+            color: #1a1a2e;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: #003366;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: #ff9800;
+        }
+
+        .faq-answer {
+            font-size: 1.2rem;
+            color: #555;
+            display: none;
+            padding-top: 5px;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Buttons */
+        .footer-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .footer-buttons a {
+            padding: 12px 25px;
+            background-color: #ff9800;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.4rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer-buttons a:hover {
+            background-color: #e68900;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Често задавани въпроси (FAQ)</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Често задавани въпроси</h2>
+        <p>Тук можете да намерите отговори на най-често задаваните въпроси относно нашите услуги и продукти.</p>
+
+        <!-- Search Bar -->
+        <h3>Търсене на отговор</h3>
+        <div class="search-bar">
+            <input type="text" id="faq-search" placeholder="Търсене на отговори..." onkeyup="searchFAQ()">
+        </div>
+
+        <!-- FAQ List -->
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">1. Как да създам акаунт?</p>
+            <p class="faq-answer">Кликнете върху "Регистрация" на нашия сайт и попълнете необходимите данни.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">2. Как да възстановя забравена парола?</p>
+            <p class="faq-answer">Кликнете на "Забравена парола" на страницата за вход и следвайте инструкциите.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">3. Как да направя плащане?</p>
+            <p class="faq-answer">Можете да платите с кредитна/дебитна карта или други налични методи.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">4. Как да се свържа с поддръжката?</p>
+            <p class="faq-answer">Свържете се с нас по имейл на <a href="mailto:support@yourcompany.com">support@yourcompany.com</a> или по телефон +1 234 567 890.</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">5. Какво да направя, ако не получавам имейли от вас?</p>
+            <p class="faq-answer">Проверете папката за спам и добавете нашия домейн в белия списък.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 NovaGridSolar. Всички права запазени.</p>
+        <p><a href="#">Политика за поверителност</a> | <a href="#">Условия за ползване</a></p>
+
+        <!-- Footer Buttons -->
+        <div class="footer-buttons">
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+            <a href="main.html">Main page</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAnswer(questionElement) {
+            let answer = questionElement.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+
+        function searchFAQ() {
+            let input = document.getElementById("faq-search").value.toLowerCase();
+            let faqItems = document.getElementsByClassName("faq-item");
+
+            for (let i = 0; i < faqItems.length; i++) {
+                let question = faqItems[i].getElementsByClassName("faq-question")[0].innerText.toLowerCase();
+                let answer = faqItems[i].getElementsByClassName("faq-answer")[0].innerText.toLowerCase();
+                if (question.includes(input) || answer.includes(input)) {
+                    faqItems[i].style.display = "block";
+                } else {
+                    faqItems[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
